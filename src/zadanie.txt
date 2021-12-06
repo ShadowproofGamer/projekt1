@@ -1,0 +1,21 @@
+Napisz generator postaci do gry komputerowej:
+- W grze będą występowały różne postaci, m.in. król, rycerz,  chłop, kucharka, marines, elf, smok).
+- W grze każda z postaci może walczyć tylko jednej bronią (miecz, widły, wałek, karabin, łuk, strumień ognia).
+- * Każda postać posiada swój pancerz - różnego rodzaju - ciężki, lekki ...
+
+Implementacja:
+- Zaimplementuj symulator i jego postacie używając wzorca strategii.
+- Po uruchomieniu aplikacji w konsoli ma być możliwość wybrania rodzaju postaci oraz nadania jej imienia.
+- Za pomocą prostego menu postaci każda stworzona postać może iść do przodu lub wykonać akcję "prezentuj broń".
+- Menu główne pozwala na utworzenie nowej postaci i wręczenie jej broni
+- Istnieje możliwość wyświetlenia wszystkich utworzonych postaci, wyboru jednej z nich i operacji idź/prezentuj broń
+- * Postaci mogą ze sobą walczyć, zadane obrażenia są zależne od typu broni i typu pancerza
+
+Ocenie podlegają:
+- podział klas ze względu na funkcjonalności
+- poprawna implementacja wzorca
+- wykorzystanie klas abstrakcyjnych, interfejsów i polimorfizmu (w zależności od implementacji)
+- formatowanie
+- brak duplikacji w kodzie
+- poprawność nazewnictwa zmiennych (polskie/angielskie nazwy, notacja)
+
