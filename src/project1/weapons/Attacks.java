@@ -1,4 +1,4 @@
-package weapons;
+package project1.weapons;
 
 public interface Attacks {
     public void attack();

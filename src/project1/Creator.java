@@ -1,4 +1,8 @@
-import weapons.*;
+package project1;
+
+import project1.defence.*;
+import project1.heroes.*;
+import project1.weapons.*;
 
 import java.util.Scanner;
 
@@ -16,7 +20,7 @@ public class Creator {
         return weapon;
     }
     private static Defends returnArmor(int a){
-        Defends armor = new LightArmor();
+        Defends armor = new NoArmor();
         switch (a){
             case 1: armor = new LightArmor();break;
             case 2: armor = new HeavyArmor();break;
@@ -37,7 +41,7 @@ public class Creator {
         int armor = 4;
         if(choice!=7){
             System.out.print("Choose your weapon type:" +
-                    "\n1.weapons.Sword\n2.weapons.Bow\n3.weapons.Pitchfork\n4.Rolling pin\n5.weapons.Rifle\n");
+                    "\n1.Sword\n2.Bow\n3.Pitchfork\n4.Rolling pin\n5.Rifle\n");
             weapon = scan.nextInt();
             System.out.print("Choose your armor type:" +
                     "\n1.Light armor\n2.Heavy armor\n3.No armor\n");

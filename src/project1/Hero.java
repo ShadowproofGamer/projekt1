@@ -1,9 +1,14 @@
-import weapons.Attacks;
+package project1;
+
+import project1.defence.Defends;
+import project1.weapons.Attacks;
 
 public abstract class Hero {
     protected Attacks weapon;
     protected Defends armor;
     private String name;
+    private int hp =1;
+
 
     public Hero(Attacks weapon, String name, Defends armor) {
         setWeapon(weapon);
@@ -26,5 +31,9 @@ public abstract class Hero {
 
     public void setArmor(Defends armor) {
         this.armor = armor;
+    }
+
+    public void setHp(int hp) {
+        this.hp = hp;
     }
 }
