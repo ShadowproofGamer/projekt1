@@ -7,7 +7,7 @@ public abstract class Hero {
     protected Attacks weapon;
     protected Defends armor;
     private String name;
-    private int hp =1;
+    private int hp = 1;
 
 
     public Hero(Attacks weapon, String name, Defends armor) {
@@ -36,4 +36,10 @@ public abstract class Hero {
     public void setHp(int hp) {
         this.hp = hp;
     }
+
+    public int getHp() {
+        return hp;
+    }
+
+
 }

@@ -23,6 +23,7 @@ public class main {
         //myGuy.weapon.attack();
         //myGuy.armor.defends();
         //System.out.println(heroes);
+
         mainLoop();
         System.out.println("\nThank you for playing!");
     }
@@ -60,31 +61,31 @@ public class main {
                     exitLoop = 1;
                 }
             }
-            //gra:
+            //game:
             if (exitGame != 1)
                 System.out.println("Welcome in the game, you're playing the character called " + currentCharacter.getName());
             while (exitGame != 1) {
                 System.out.println("Choose your next action:");
                 System.out.println("1. Go straight for the adventure!");
                 System.out.println("2. Show off your weapon");
-                System.out.println("3. Fight");
+                if (enemy!=null) System.out.println("3. Fight");
                 System.out.println("4. Exit");
-                //chodzenie po grze i walka
-                //prezentowanie broni
                 int tempChoice = scan.nextInt();
                 if (tempChoice == 1) {
-                    System.out.println("Something happens");
+                    //TODO events and enemies raffle
+                    //System.out.println("\nSomething happens");
+                    enemy = EventsGenerator.generateEvent();
                 } else if (tempChoice == 2) {
-                    System.out.println("Showing off your weapon:");
+                    System.out.println("\nShowing off your weapon:");
                     currentCharacter.weapon.showOff();
-                } else if (tempChoice == 3) {
-                    System.out.println("The battle begins!");
+                } else if (tempChoice == 3 && enemy!=null) {
+                    System.out.println("\nThe battle begins!");
+                    //TODO battle system/loop
                     currentCharacter.weapon.attack();
                 } else if (tempChoice == 4) {
                     exitGame = 1;
                 }
             }
         }
-
     }
 }

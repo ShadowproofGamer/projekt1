@@ -48,10 +48,12 @@ public class Creator {
             armor = scan.nextInt();
         }
         //System.out.println(weapon);
+        return generate(choice, weapon, armor, name);
 
-
+    }
+    public static Hero generate(int choice, int weapon, int armor, String name){
         //placeholder for safety
-        Hero hero = new Knight(returnWeapon(1), "Steve", returnArmor(armor));
+        Hero hero = new Knight(returnWeapon(1), "Steve", returnArmor(1));
 
         switch (choice){
             case 1 :{
@@ -79,7 +81,7 @@ public class Creator {
                 break;
             }
             case 7 :{
-                hero = new Dragon(returnWeapon(weapon), name, returnArmor(armor));
+                hero = new Dragon(returnWeapon(6), name, returnArmor(4));
                 break;
             }
         }
