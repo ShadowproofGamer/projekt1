@@ -15,7 +15,7 @@ public class EventsGenerator {
             case 1: System.out.println("Nothing happens...\n");break;
             case 2: System.out.println("You enter a dangerous place\n");enemy = Creator.generate(heroType, weapon, armor, "enemy"+number);break;
             case 3: System.out.println("You went for a nice walk");break;
-            default: System.out.println("You enter a dangerous neighbourhood place\n");enemy = Creator.generate(3, 4, 3, "enemy"+number);break;
+            default: System.out.println("You enter a dangerous neighbourhood\n");enemy = Creator.generate(3, 4, 3, "enemy"+number);break;
         }
 
         return enemy;

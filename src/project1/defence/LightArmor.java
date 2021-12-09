@@ -2,7 +2,7 @@ package project1.defence;
 
 public class LightArmor implements Defends {
     @Override
-    public void defends() {
-        //
+    public int defends(int damage) {
+        return damage-2;
     }
 }

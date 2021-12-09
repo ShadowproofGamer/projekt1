@@ -33,6 +33,10 @@ public abstract class Hero {
         this.armor = armor;
     }
 
+    public Defends getArmor() {
+        return armor;
+    }
+
     public void setHp(int hp) {
         this.hp = hp;
     }

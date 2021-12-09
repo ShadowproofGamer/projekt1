@@ -10,5 +10,6 @@ import project1.weapons.*;
 public class Knight extends Hero {
     public Knight(Attacks weapon, String name, Defends defends){
         super(weapon, name, defends);
+        setHp(90);
     }
 }
