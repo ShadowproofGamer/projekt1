@@ -34,7 +34,7 @@ public class main {
                 currentCharacter = Creator.create();
                 heroes.add(currentCharacter);
             }
-            if (currentCharacter==null){
+            if (currentCharacter == null) {
                 currentCharacter = CharacterSelector.select(heroes);
             }
             while (exitMainMenu != 1) {
@@ -42,7 +42,8 @@ public class main {
                 //2. create character
                 //3. start the game
                 //4. exit
-                System.out.println("\nMain menu:\n1. Choose character\n2. Create character\n3. Start the game\n4. Exit\n");
+                //5. change weapon
+                System.out.println("\nMain menu:\n1. Choose character\n2. Create character\n3. Start the game\n4. Exit\n5.Change weapon\n");
                 int tempChoice = scan.nextInt();
                 if (tempChoice == 1) {
                     currentCharacter = CharacterSelector.select(heroes);
@@ -54,6 +55,11 @@ public class main {
                     exitMainMenu = 1;
                     exitGame = 1;
                     exitLoop = 1;
+                } else if (tempChoice == 5) {
+                    System.out.print("Choose your weapon type:" +
+                            "\n1.Sword\n2.Bow\n3.Pitchfork\n4.Rolling pin\n5.Rifle\n");
+                    System.out.println("");
+                    currentCharacter.setWeapon(Creator.returnWeapon(scan.nextInt()));
                 }
             }
             //game:
@@ -66,29 +72,29 @@ public class main {
                 System.out.println("2. Show off your weapon");
                 if (enemy != null) System.out.println("3. Fight");
                 System.out.println("4. Exit");
+                //System.out.println("5. Change weapon");
                 int tempChoice = scan.nextInt();
 
                 if (tempChoice == 1) {
                     enemy = EventsGenerator.generateEvent();
                 } else if (tempChoice == 2) {
                     System.out.println("\nShowing off your weapon:");
-                    currentCharacter.weapon.showOff();
+                    currentCharacter.weaponShowOff();
                 } else if (tempChoice == 3 && enemy != null) {
                     System.out.println("\nThe battle begins!");
-                    while(currentCharacter.getHp()>0 && enemy.getHp()>0){
-                        currentCharacter.weapon.attack(enemy);
-                        if (enemy.getHp()>0) enemy.weapon.attack(currentCharacter);
+                    while (currentCharacter.getHp() > 0 && enemy.getHp() > 0) {
+                        currentCharacter.attack(enemy);
+                        if (enemy.getHp() > 0) enemy.attack(currentCharacter);
                     }
-                    if (currentCharacter.getHp()<=0) {
+                    if (currentCharacter.getHp() <= 0) {
                         System.out.println("\nSorry you have lost... Game over\n");
                         heroes.remove(currentCharacter);
-                        currentCharacter=null;
+                        currentCharacter = null;
                         exitGame = 1;
-                    }
-                    else if (enemy.getHp()<=0){
+                    } else if (enemy.getHp() <= 0) {
                         System.out.println("\nYou've won... Congratulations!");
-                        System.out.println(currentCharacter.getHp()+" HP left\n");
-                        enemy=null;
+                        System.out.println(currentCharacter.getHp() + " HP left\n");
+                        enemy = null;
                     }
                 } else if (tempChoice == 4) {
                     exitGame = 1;

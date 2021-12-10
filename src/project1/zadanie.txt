@@ -19,3 +19,8 @@ Ocenie podlegają:
 - brak duplikacji w kodzie
 - poprawność nazewnictwa zmiennych (polskie/angielskie nazwy, notacja)
 
+pytanie:
+1. Czy poprawnym jest wywoływanie
+    weapon.attack()     i    armor.defends()
+2. Czy konieczna jest obsługa wyjątków.
+3. Czy zaimplementować zmianę broni w trakcie.

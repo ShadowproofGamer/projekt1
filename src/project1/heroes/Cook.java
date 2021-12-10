@@ -7,7 +7,7 @@ import project1.weapons.*;
 
 public class Cook extends Hero {
 
-    public Cook(Attacks weapon, String name, Defends defends){
+    public Cook(Attacks weapon, String name, Defends defends) {
         super(weapon, name, defends);
         setHp(70);
     }

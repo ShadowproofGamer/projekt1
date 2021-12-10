@@ -37,6 +37,10 @@ public abstract class Hero {
         return armor;
     }
 
+    public int defends(int damage) {
+        return armor.defends(damage);
+    }
+
     public void setHp(int hp) {
         this.hp = hp;
     }
@@ -45,5 +49,11 @@ public abstract class Hero {
         return hp;
     }
 
+    public void attack(Hero enemy) {
+        weapon.attack(enemy);
+    }
 
+    public void weaponShowOff() {
+        weapon.showOff();
+    }
 }

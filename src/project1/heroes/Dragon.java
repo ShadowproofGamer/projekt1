@@ -8,7 +8,7 @@ import project1.weapons.*;
 
 public class Dragon extends Hero {
 
-    public Dragon(Attacks weapon, String name, Defends defends){
+    public Dragon(Attacks weapon, String name, Defends defends) {
         super(weapon, name, defends);
         setHp(140);
     }
